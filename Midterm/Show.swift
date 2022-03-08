@@ -7,6 +7,10 @@
 
 import Foundation
 
+struct Shows: Codable {
+    var results: [Show]
+}
+
 struct Show: Codable, Hashable {
     var id: Int
     var collectionName: String

@@ -12,9 +12,3 @@ import Foundation
 class ShowStore {
     var watchlist = [Show]()
 }
-
-import Foundation
-
-struct Shows: Codable {
-    var results: [Show]
-}
