@@ -18,11 +18,13 @@ class ViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
 
+    //MARK: View Did Load
     override func viewDidLoad() {
         super.viewDidLoad()
         
     }
     
+    //MARK: Data Fetch Methods
     func createShowURL(from text: String) -> URL? {
         
         guard let cleanURL = text.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed)
@@ -61,6 +63,19 @@ class ViewController: UIViewController {
             }
         }
         showTask.resume()
+    }
+    
+    //MARK: Navigation
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let selectedIndex = tableView.indexPathForSelectedRow else { return }
+
+        let selectedShow = showResults[selectedIndex.row]
+        let destinationVC = segue.destination as! DetailViewController
+        
+        destinationVC.show = selectedShow
+        destinationVC.showStore = showStore
+
     }
 
 }
