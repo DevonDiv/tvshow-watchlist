@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8561078527D7BD8800F2538F /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8561078427D7BD8800F2538F /* DetailViewController.swift */; };
+		8561078727D8294900F2538F /* WatchListCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8561078627D8294900F2538F /* WatchListCollectionViewController.swift */; };
 		8563973727D693DA0009AB44 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8563973627D693DA0009AB44 /* AppDelegate.swift */; };
 		8563973927D693DA0009AB44 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8563973827D693DA0009AB44 /* SceneDelegate.swift */; };
 		8563973B27D693DA0009AB44 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8563973A27D693DA0009AB44 /* ViewController.swift */; };
@@ -21,6 +22,7 @@
 
 /* Begin PBXFileReference section */
 		8561078427D7BD8800F2538F /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		8561078627D8294900F2538F /* WatchListCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchListCollectionViewController.swift; sourceTree = "<group>"; };
 		8563973327D693DA0009AB44 /* Midterm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Midterm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8563973627D693DA0009AB44 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8563973827D693DA0009AB44 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -48,7 +50,6 @@
 		8563972A27D693DA0009AB44 = {
 			isa = PBXGroup;
 			children = (
-				8561078427D7BD8800F2538F /* DetailViewController.swift */,
 				8563973527D693DA0009AB44 /* Midterm */,
 				8563973427D693DA0009AB44 /* Products */,
 			);
@@ -65,6 +66,8 @@
 		8563973527D693DA0009AB44 /* Midterm */ = {
 			isa = PBXGroup;
 			children = (
+				8561078627D8294900F2538F /* WatchListCollectionViewController.swift */,
+				8561078427D7BD8800F2538F /* DetailViewController.swift */,
 				8563975327D69A680009AB44 /* ShowTableViewCell.swift */,
 				8563973627D693DA0009AB44 /* AppDelegate.swift */,
 				8563973827D693DA0009AB44 /* SceneDelegate.swift */,
@@ -150,6 +153,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8561078727D8294900F2538F /* WatchListCollectionViewController.swift in Sources */,
 				8563975427D69A680009AB44 /* ShowTableViewCell.swift in Sources */,
 				8563973B27D693DA0009AB44 /* ViewController.swift in Sources */,
 				8563973727D693DA0009AB44 /* AppDelegate.swift in Sources */,

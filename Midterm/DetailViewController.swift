@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import WebKit
 
 class DetailViewController: UIViewController {
     
@@ -17,6 +18,7 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var showTitle: UILabel!
     @IBOutlet weak var showArtist: UILabel!
     @IBOutlet weak var showDescription: UILabel!
+    @IBOutlet weak var trackView: WKWebView!
     
     //MARK: Actions
     @IBAction func addToWatchList(_ sender: Any) {
@@ -30,7 +32,11 @@ class DetailViewController: UIViewController {
         if let show = show {
             showTitle.text = show.collectionName
             showArtist.text = show.artistName
-            showDescription.text = show.description
+            showDescription.text = show.longDescription
+            
+            let url = URL(string: show.trackViewUrl)
+            let request = URLRequest(url: url!)
+            trackView.load(request)
         }
     }
     

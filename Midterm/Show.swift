@@ -12,11 +12,12 @@ struct Shows: Codable {
 }
 
 struct Show: Codable, Hashable {
-    var id: Int
+    var collectionId: Int
     var collectionName: String
-    var image: String?
+    var artworkUrl100: String?
     var trackName: String
     var artistName: String
-    var price: Double
-    var description: String
+    var trackPrice: Double
+    var longDescription: String
+    var trackViewUrl: String
 }

@@ -7,7 +7,6 @@
 
 import Foundation
 
-import Foundation
 
 class ShowStore {
     var watchlist = [Show]()
