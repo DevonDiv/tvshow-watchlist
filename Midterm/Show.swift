@@ -20,4 +20,5 @@ struct Show: Codable, Hashable {
     var trackPrice: Double
     var longDescription: String
     var trackViewUrl: String
+    var contentAdvisoryRating: String
 }

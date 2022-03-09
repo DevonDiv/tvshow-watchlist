@@ -38,9 +38,33 @@ class WatchListCollectionViewController: UICollectionViewController {
         cell.episodeName?.text = show.trackName
         cell.showName?.text = show.collectionName
         
+        if(show.contentAdvisoryRating == "TV-MA") {
+            cell.contentRating?.image = UIImage(systemName: "eye.trianglebadge.exclamationmark")
+        } else {
+            cell.contentRating?.image = UIImage(systemName: "eye")
+        }
+        
         return cell
     }
     
-    //TODO: Add method to remove show from watch list
+    //MARK: Delete WatchList Item Method
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+            let show = showStore.watchlist[indexPath.item]
+            
+        let showAlert = UIAlertController(title: "Delete Episode?", message: "Do you want to remove \(show.trackName) from your watch list?", preferredStyle: .alert)
+            
+            showAlert.addAction(UIAlertAction(title: "Delete", style: .default) {
+                [weak self] _ in
+                self?.showStore.watchlist.remove(at: indexPath.item)
+                self?.collectionView.reloadData()
+            })
+            
+            showAlert.addAction(UIAlertAction(title: "Cancel", style: .default) {
+                [weak self] _ in
+                self?.dismiss(animated: true)
+            })
+            
+            present(showAlert, animated: true)
+        }
 
 }

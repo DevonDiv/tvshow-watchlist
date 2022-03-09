@@ -12,5 +12,6 @@ class ShowCollectionViewCell: UICollectionViewCell {
     //MARK: Outlets
     @IBOutlet weak var episodeName: UILabel!
     @IBOutlet weak var showName: UILabel!
+    @IBOutlet weak var contentRating: UIImageView!
     
 }
