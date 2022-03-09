@@ -22,6 +22,28 @@ class DetailViewController: UIViewController {
     
     //MARK: Actions
     @IBAction func addToWatchList(_ sender: Any) {
+        if let show = show {
+            if !showStore.watchlist.contains(show) {
+                showStore.watchlist.append(show)
+                
+                let showAlert = UIAlertController(title: "🎉Hooray!🎉", message: "\(show.collectionName) has been added to your watch list!", preferredStyle: .alert)
+                showAlert.addAction(UIAlertAction(title: "OK", style: .default) {
+                    [weak self] _ in
+                    self?.navigationController?.popViewController(animated: true)
+                })
+                
+                present(showAlert, animated: true)
+            } else {
+                let showAlert = UIAlertController(title: "\(show.collectionName) is already in your watch list", message: nil, preferredStyle: .alert)
+                
+                showAlert.addAction(UIAlertAction(title: "OK", style: .default) {
+                    [weak self] _ in
+                    self?.navigationController?.popViewController(animated: true)
+                })
+                
+                present(showAlert, animated: true)
+            }
+        }
     }
     
 
@@ -38,6 +60,18 @@ class DetailViewController: UIViewController {
             let request = URLRequest(url: url!)
             trackView.load(request)
         }
+    }
+    
+    func showAlert(withTitle title: String, withMessage message: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let alertAction = UIAlertAction(title: "OK", style: .default) {
+            [weak self] _ in
+            self?.navigationController?.popViewController(animated: true)
+        }
+        
+        alert.addAction(alertAction)
+        
+        present(alert, animated: true)
     }
     
 
