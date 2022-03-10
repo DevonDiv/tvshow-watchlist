@@ -22,7 +22,6 @@ class DetailViewController: UIViewController {
     
     //MARK: Actions
     @IBAction func addToWatchList(_ sender: Any) {
-        print(showStore.watchlist)
         if let show = show {
             //check if the show being added is already in the watch list
             if !showStore.watchlist.contains(show) {

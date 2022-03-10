@@ -9,14 +9,30 @@ import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
+    //MARK: Propeties
     var window: UIWindow?
-
+    var showStore = ShowStore()
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let _ = (scene as? UIWindowScene) else { return }
+        
+        /*assign the root view controller to the tab bar controller
+         then add each navigation option to the tab bar controller
+         followed by adding the ViewController and WatchListCollectionViewController
+         to each navigation option
+         */
+        guard let rootVC = window?.rootViewController as? UITabBarController,
+              let firstTab = rootVC.viewControllers?[0] as? UINavigationController,
+              let secondTab = rootVC.viewControllers?[1] as? UINavigationController,
+              let tableVC = firstTab.viewControllers[0] as? ViewController,
+              let watchListVC = secondTab.viewControllers[0] as? WatchListCollectionViewController else { return }
+        
+        //initialize the show store object to each view controller
+        tableVC.showStore = showStore
+        watchListVC.showStore = showStore
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

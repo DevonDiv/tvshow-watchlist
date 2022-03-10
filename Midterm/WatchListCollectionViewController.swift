@@ -12,9 +12,18 @@ class WatchListCollectionViewController: UICollectionViewController {
     //MARK: Properties
     var showStore: ShowStore!
 
+    //MARK: View Did Load
     override func viewDidLoad() {
         super.viewDidLoad()
 
+    }
+    
+    //MARK: View Will Appear
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        //reload the collection view on tab bar navigation
+        self.collectionView.reloadData()
     }
     
     
