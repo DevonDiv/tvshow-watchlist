@@ -67,7 +67,7 @@
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="bottomMargin" secondItem="doH-RZ-uk4" secondAttribute="bottom" constant="50" id="06N-T3-Cz0"/>
+                                                <constraint firstAttribute="bottomMargin" relation="lessThanOrEqual" secondItem="doH-RZ-uk4" secondAttribute="bottom" constant="50" id="06N-T3-Cz0"/>
                                                 <constraint firstItem="fOi-fs-Vys" firstAttribute="leading" secondItem="sDT-o8-tUU" secondAttribute="trailing" constant="15" id="0Tq-Pl-z4W"/>
                                                 <constraint firstItem="sDT-o8-tUU" firstAttribute="leading" secondItem="3t8-Zk-VxQ" secondAttribute="leadingMargin" id="7mq-KQ-lP2"/>
                                                 <constraint firstItem="sDT-o8-tUU" firstAttribute="top" secondItem="5Gq-Qg-K7j" secondAttribute="bottom" constant="26.5" id="Aiv-p4-zmo"/>
@@ -151,7 +151,7 @@
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O3x-Oy-6e2">
-                                            <rect key="frame" x="10" y="108.5" width="180" height="13.5"/>
+                                            <rect key="frame" x="10" y="108" width="180" height="13.5"/>
                                             <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
@@ -160,8 +160,8 @@
                                             <rect key="frame" x="88" y="171.5" width="24" height="16.5"/>
                                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xX1-md-hzg">
-                                            <rect key="frame" x="10" y="72.5" width="180" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xX1-md-hzg">
+                                            <rect key="frame" x="10" y="72.5" width="180" height="20.5"/>
                                             <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
