@@ -190,10 +190,14 @@ extension ViewController: UITableViewDataSource {
         cell.artistNameLabel.text = show.artistName
         cell.priceLabel.text = "$\(show.trackPrice)"
         
-        //check if the show artwork exists
-        if let showImage = show.artworkUrl100 {
-            //fetch the artwork to load into the table view cell
-            fetchImage(for: showImage, in: cell)
+        if(show.artworkUrl100 == "" || show.artworkUrl100 == nil) {
+            cell.showImageView.image = UIImage(named: "NoShow.png")
+        } else {
+            //check if the show artwork exists
+            if let showImage = show.artworkUrl100 {
+                //fetch the artwork to load into the table view cell
+                fetchImage(for: showImage, in: cell)
+            }
         }
         
         return cell
